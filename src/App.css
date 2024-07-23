@@ -1,0 +1,15 @@
+.App {
+  text-align: center;
+}
+@font-face {
+  font-family: "jalnan";
+  src: url("assets/font/Jalnan2TTF.ttf");
+}
+@font-face {
+  font-family: "jalnanGothic";
+  src: url("assets/font/JalnanGothicTTF.ttf");
+}
+@font-face {
+  font-family: "pretendard";
+  src: url("assets/font/Pretendard-Regular.ttf");
+}

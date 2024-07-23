@@ -1,0 +1,147 @@
+.login-page {
+  background-color: #00c6ae;
+  /*width: 100%;
+  min-height: 100vh;*/
+  width: 1900px;
+  height: 950px;
+  display: flex;
+  align-items: end;
+}
+
+.sketchbook-container {
+  width: 100%;
+  height: 700px;
+  background-color: white;
+  position: relative;
+}
+
+.service-text {
+  color: #2d2d2d;
+  font-family: "jalnanGothic";
+  font-size: 2.25rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  position: absolute;
+  top: 7.88rem;
+  left: 8.88rem;
+}
+
+.login-form {
+  position: absolute;
+  top: 18.56rem;
+  left: 8.88rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.login-form input {
+  margin-bottom: 0.75rem;
+  width: 20.625rem;
+  height: 2.75rem;
+  padding-left: 1rem;
+  flex-shrink: 0;
+  border: 1px solid #dfdfdf;
+  background: #fff;
+  font-family: pretendard;
+  color: #c2c2c2;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.loginBtn {
+  margin-bottom: 0.75rem;
+  width: 20.625rem;
+  height: 3rem;
+  flex-shrink: 0;
+  border-radius: 0.9375rem;
+  background: #2d2d2d;
+  font-family: pretendard;
+  color: #fff;
+  font-family: Pretendard;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  cursor: pointer;
+}
+
+.add-functions {
+  display: flex;
+  justify-content: space-between;
+  color: #000;
+  font-family: Pretendard;
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.add-functions div {
+  cursor: pointer;
+}
+
+.svg-container {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  bottom: 0;
+}
+
+.ring {
+  position: absolute;
+  top: -1.25rem;
+  left: 9rem;
+}
+
+.speech-bubble {
+  position: absolute;
+  right: 52rem;
+  bottom: 13rem;
+  width: 9rem;
+  height: 5.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.speech-text {
+  position: absolute;
+  text-align: center;
+  color: #000;
+  font-family: "jalnan";
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.calendar {
+  position: absolute;
+  right: 11rem;
+  bottom: 16rem;
+}
+
+.cat,
+.turtle,
+.crow {
+  position: absolute;
+  z-index: 1;
+}
+
+.cat {
+  right: 45rem;
+  bottom: 2.79rem;
+}
+
+.turtle {
+  right: 25rem;
+  bottom: 0rem;
+}
+
+.crow {
+  right: 7rem;
+  bottom: 0rem;
+}
