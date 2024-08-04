@@ -11,11 +11,14 @@
   - Calendar.js
   - Day.js
   - Menu.js
+  - Memo.js
 - pages
   - Home.js
   - Login.js
   - Join.js
   - SetPassword.js
+  - Stamp.js
+  - Advice.js
 - styles
   - Login.css
   - Calendar.css
@@ -23,6 +26,9 @@
   - Home.css
   - Join.css
   - Menu.css
+  - Memo.css
+  - Stamp.css
+  - Advice.css
 - App.js
 - DateContext.js
 - App.css
