@@ -1,0 +1,53 @@
+.add-schedule-page {
+    display: flex;
+    height: 100%;
+  }
+  
+  .add-schedule-page .main-box {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  
+  .stamp-calendar {
+    width: 80%;
+    height: 70%;
+    margin-bottom: 4rem;
+  }
+  
+  .stamp-calendar > * {
+    flex: 1;
+  }
+  .add-schedule-page .doB-box {
+    width: 80%;
+    position: absolute;
+    bottom: 0.5rem;
+    z-index: 1;
+  }
+  
+  .doB-box .doB {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+  
+  .doB-box .text-box {
+    width: 60rem;
+  }
+  
+  .text-stamp {
+    position: absolute;
+    top: 4rem;
+    left: 8rem;
+    color: #000;
+    text-align: center;
+    font-family: "jalnanGothic";
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: var(--Headline-Medium-Line-Height, 2.25rem); /* 150% */
+  }
+  
