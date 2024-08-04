@@ -23,11 +23,9 @@ export default function Login() {
   };
 
   //로그인 버튼 클릭시
-  /*
-  const handleLogin = () =>{
+  const handleLogin = () => {
     navigate("/home");
   };
-  */
 
   return (
     <div className="login-page">
@@ -42,7 +40,9 @@ export default function Login() {
         <div className="login-form">
           <input type="email" placeholder="이메일을 입력하세요." />
           <input type="password" placeholder="비밀번호를 입력하세요." />
-          <button className="loginBtn">로그인</button>
+          <button onClick={handleLogin} className="loginBtn">
+            로그인
+          </button>
           <div className="add-functions">
             <div onClick={handleJoin}>회원가입</div>
             <div onClick={handleSetPassword}>비밀번호 재설정</div>
