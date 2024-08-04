@@ -1,0 +1,44 @@
+.advice-page {
+  display: flex;
+}
+
+.image-container {
+  position: relative;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.image-container img.cloud {
+  width: 100%;
+  height: auto;
+}
+
+.image-container img.doB {
+  position: absolute;
+  width: 15vw;
+  bottom: 18vw;
+  left: 20vw;
+}
+
+.image-container .textBox {
+  position: absolute;
+  width: 26vw;
+  height: 11vw;
+  bottom: 28vw;
+  left: 32vw;
+  background-image: url("../assets/img/round_rect2.png");
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  padding: 4vw;
+  color: #000;
+  text-align: center;
+  font-family: "jalnanGothic";
+  font-size: 1.5vw;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2.8125rem;
+}
