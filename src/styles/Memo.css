@@ -1,0 +1,32 @@
+.memo-container {
+  width: 17.4375rem;
+  height: 20.8125rem;
+  flex-shrink: 0;
+  border: 1px solid #c2c2c2;
+  box-shadow: 2px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  filter: blur(0.25px);
+  padding: 10px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.memo-title {
+  margin-bottom: 10px;
+  color: #000;
+  font-family: Pretendard;
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.memo-content {
+  flex: 1;
+  font-family: pretendard;
+  font-size: 1rem;
+  color: #333;
+  border: none;
+  resize: none;
+  outline: none;
+}
