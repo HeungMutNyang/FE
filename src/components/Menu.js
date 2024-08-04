@@ -8,6 +8,7 @@ export default function Menu() {
   const [dateSet, setDateSet] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
+
   const handleDate = () => {
     setDateSet(!dateSet);
   };
@@ -28,6 +29,10 @@ export default function Menu() {
     return `${year}년 ${month}월 ${day}일`;
   };
 
+  const handleDiaryClick = () => {
+    navigate(`/diary/${date}`);
+  };
+
   return (
     <div className="Menu_bar">
       <div className="Menu_items">
@@ -39,8 +44,8 @@ export default function Menu() {
             <input type="date" value={date} onChange={handleDateChange} />
           )}
         </div>
-        <div>오늘의 일기</div>
-        <div>일정 추가</div>
+        <div onClick={handleDiaryClick}>오늘의 일기</div>
+        <div onClick={() => navigate("/add-schedule")}>일정 추가</div>
         <div onClick={() => navigate("/stamp")}>도장찍기</div>
         <div onClick={() => navigate("/advice")}>도비의 조언 듣기</div>
         <div onClick={() => navigate("/login")}>로그아웃</div>
