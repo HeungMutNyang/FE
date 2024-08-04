@@ -1,0 +1,98 @@
+.home-page {
+  height: 100%;
+  display: flex;
+}
+.home-page .main-box {
+  width: 80%;
+  display: flex;
+  position: relative;
+}
+
+.left-box {
+  margin-left: 8rem;
+  padding-top: 6rem;
+}
+
+.date {
+  width: 48rem;
+  height: 30.9375rem;
+  flex-shrink: 0;
+}
+
+.memo {
+  margin-top: 11.9rem;
+  margin-left: 4rem;
+}
+
+.fail {
+  width: 48rem;
+  height: 16.8125rem;
+  flex-shrink: 0;
+  background-color: #fff;
+  position: relative;
+  margin-top: 2rem;
+  /* margin-left: 8rem; */
+  border: 1px solid #c2c2c2;
+  box-shadow: 2px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  filter: blur(0.25px);
+}
+
+.fail h3 {
+  color: #2d2d2d;
+  font-family: pretendard;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  padding: 1rem;
+}
+
+.fail img {
+  position: absolute;
+  bottom: 0;
+}
+
+ol {
+  padding: 2rem;
+  color: #a2a2a2;
+  font-family: pretendard;
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.advice-box {
+  margin-left: 3rem;
+  display: flex;
+  flex-direction: column;
+  background-color: aliceblue;
+  position: relative;
+}
+
+.advice-box .text {
+  position: absolute;
+  top: 3rem;
+  z-index: 1;
+}
+
+.advice-box .doB {
+  position: absolute;
+  top: 8rem;
+}
+
+.advice {
+  width: 14.75rem;
+  height: 3.25rem;
+  position: absolute;
+  top: 5rem;
+  left: 2rem;
+  z-index: 2;
+  color: #000;
+  text-align: center;
+  font-family: "JalnanGothic";
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: var(--Headline-Medium-Line-Height, 2.25rem); /* 240% */
+}
