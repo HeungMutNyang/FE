@@ -1,7 +1,9 @@
+// 회원가입 페이지
 import { useState } from "react";
 import "../styles/Join.css";
 import { useNavigate } from "react-router-dom";
 import profile from "../assets/img/profile.png";
+import axios from "axios";
 
 // InputFiled 태그 사용자지정
 const InputField = ({ label, type, value, onChange, placeholder, onClick }) => {
@@ -40,7 +42,32 @@ export default function Join() {
       setAlertMessage("비밀번호 규칙에 맞지 않습니다.");
     } else {
       setAlertMessage("");
-      navigate("/login");
+      const requestBody = {
+        email: userEmail,
+        username: userName,
+        password: userPwd,
+        id: nickname,
+      };
+
+      const token = localStorage.getItem("ACCESS_TOKEN");
+
+      axios
+        .post(
+          `${process.env.REACT_APP_API_BASE_URL}/auth/signup`,
+          requestBody,
+          {
+            headers: {
+              Authorization: token ? `Bearer ${token}` : "",
+              "Content-Type": "application/json",
+            },
+          }
+        )
+        .then((response) => {
+          navigate("/login");
+        })
+        .catch((error) => {
+          setAlertMessage(error.response.data.error);
+        });
     }
   };
 

@@ -2,12 +2,14 @@ import React, { useContext, useState } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import "../styles/Menu.css";
 import { DateContext } from "../DateContext";
+import { useAuth } from "../AuthContext";
 
 export default function Menu() {
   const { date, setDate } = useContext(DateContext);
   const [dateSet, setDateSet] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
+  const { logout } = useAuth();
 
   const handleDate = () => {
     setDateSet(!dateSet);
@@ -33,6 +35,11 @@ export default function Menu() {
     navigate(`/diary/${date}`);
   };
 
+  const handleLogout = () => {
+    logout();
+    navigate("/login");
+  };
+
   return (
     <div className="Menu_bar">
       <div className="Menu_items">
@@ -48,7 +55,7 @@ export default function Menu() {
         <div onClick={() => navigate("/add-schedule")}>일정 추가</div>
         <div onClick={() => navigate("/stamp")}>도장찍기</div>
         <div onClick={() => navigate("/advice")}>도비의 조언 듣기</div>
-        <div onClick={() => navigate("/login")}>로그아웃</div>
+        <div onClick={handleLogout}>로그아웃</div>
       </div>
     </div>
   );

@@ -1,4 +1,5 @@
-import React from "react";
+//로그인 페이지
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../styles/Login.css";
 import ring from "../assets/img/ring.png";
@@ -8,9 +9,14 @@ import turtle from "../assets/img/turtle.png";
 import crow from "../assets/img/crow.png";
 import round_rect from "../assets/img/round_rect.png";
 import calendar from "../assets/img/calendar.png";
+import axios from "axios";
+import { useAuth } from "../AuthContext";
 
 export default function Login() {
+  const [userEmail, setUserEmail] = useState("");
+  const [userPwd, setUserPwd] = useState("");
   const navigate = useNavigate();
+  const { login } = useAuth();
 
   //회원가입 클릭시
   const handleJoin = () => {
@@ -24,7 +30,32 @@ export default function Login() {
 
   //로그인 버튼 클릭시
   const handleLogin = () => {
-    navigate("/home");
+    const requestBody = {
+      email: userEmail,
+      password: userPwd,
+    };
+
+    const token = localStorage.getItem("ACCESS_TOKEN");
+
+    axios
+      .post(`${process.env.REACT_APP_API_BASE_URL}/auth/signin`, requestBody, {
+        headers: {
+          Authorization: token ? `Bearer ${token}` : "",
+          "Content-Type": "application/json",
+        },
+      })
+      .then((response) => {
+        login(response.data.token); // 로그인 상태 업데이트
+        navigate("/");
+      })
+      .catch((error) => {
+        if (error.response) {
+          alert(error.response.data.error);
+        } else {
+          console.log(error);
+          alert("오류가 발생했습니다.");
+        }
+      });
   };
 
   return (
@@ -38,8 +69,18 @@ export default function Login() {
         </div>
 
         <div className="login-form">
-          <input type="email" placeholder="이메일을 입력하세요." />
-          <input type="password" placeholder="비밀번호를 입력하세요." />
+          <input
+            type="email"
+            placeholder="이메일을 입력하세요."
+            value={userEmail}
+            onChange={(e) => setUserEmail(e.target.value)}
+          />
+          <input
+            type="password"
+            placeholder="비밀번호를 입력하세요."
+            value={userPwd}
+            onChange={(e) => setUserPwd(e.target.value)}
+          />
           <button onClick={handleLogin} className="loginBtn">
             로그인
           </button>

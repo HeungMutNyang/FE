@@ -1,9 +1,7 @@
 .login-page {
   background-color: #00c6ae;
-  /*width: 100%;
-  min-height: 100vh;*/
-  width: 1900px;
-  height: 950px;
+  width: 100%;
+  min-height: 100vh;
   display: flex;
   align-items: end;
 }
