@@ -8,7 +8,7 @@ import cat from "../assets/img/cat.png";
 import turtle from "../assets/img/turtle.png";
 import crow from "../assets/img/crow.png";
 import round_rect from "../assets/img/round_rect.png";
-import calendar from "../assets/img/calendar.png";
+import calendar from "../assets/img/hospital.png";
 import axios from "axios";
 import { useAuth } from "../AuthContext";
 
@@ -30,32 +30,43 @@ export default function Login() {
 
   //로그인 버튼 클릭시
   const handleLogin = () => {
-    const requestBody = {
-      email: userEmail,
-      password: userPwd,
-    };
+    if (!(userEmail === "" || userPwd === "")) {
+      const requestBody = {
+        email: userEmail,
+        password: userPwd,
+      };
 
-    const token = localStorage.getItem("ACCESS_TOKEN");
+      const token = localStorage.getItem("ACCESS_TOKEN");
 
-    axios
-      .post(`${process.env.REACT_APP_API_BASE_URL}/auth/signin`, requestBody, {
-        headers: {
-          Authorization: token ? `Bearer ${token}` : "",
-          "Content-Type": "application/json",
-        },
-      })
-      .then((response) => {
-        login(response.data.token); // 로그인 상태 업데이트
-        navigate("/");
-      })
-      .catch((error) => {
-        if (error.response) {
-          alert(error.response.data.error);
-        } else {
-          console.log(error);
-          alert("오류가 발생했습니다.");
-        }
-      });
+      axios
+        .post(
+          `${process.env.REACT_APP_API_BASE_URL}/auth/signin`,
+          requestBody,
+          {
+            headers: {
+              Authorization: `Bearer ${token}`,
+              "Content-Type": "application/json",
+            },
+          }
+        )
+        .then((response) => {
+          // login(token);
+          login(response.data.token); // 로그인 상태 업데이트
+          console.log("login", response.data.token);
+          localStorage.setItem("email", response.data.email);
+          navigate("/");
+        })
+        .catch((error) => {
+          if (error.response) {
+            alert(error.response.data.error);
+          } else {
+            console.log(error);
+            alert("오류가 발생했습니다.");
+          }
+        });
+    } else {
+      alert("이메일과 비밀번호를 모두 입력하세요.");
+    }
   };
 
   return (
@@ -86,7 +97,7 @@ export default function Login() {
           </button>
           <div className="add-functions">
             <div onClick={handleJoin}>회원가입</div>
-            <div onClick={handleSetPassword}>비밀번호 재설정</div>
+            {/* <div onClick={handleSetPassword}>비밀번호 재설정</div> */}
           </div>
         </div>
 

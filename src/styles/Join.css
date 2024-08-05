@@ -88,7 +88,7 @@ form h2 {
 .mail-checking {
   width: 100%;
   position: relative;
-  padding-bottom: 2.5rem;
+  /* padding-bottom: 2.5rem; */
 }
 
 .mail-checking button {

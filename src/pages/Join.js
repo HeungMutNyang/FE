@@ -44,9 +44,9 @@ export default function Join() {
       setAlertMessage("");
       const requestBody = {
         email: userEmail,
-        username: userName,
+        username: nickname,
         password: userPwd,
-        id: nickname,
+        id: userEmail,
       };
 
       const token = localStorage.getItem("ACCESS_TOKEN");
@@ -57,7 +57,7 @@ export default function Join() {
           requestBody,
           {
             headers: {
-              Authorization: token ? `Bearer ${token}` : "",
+              Authorization: `Bearer ${token}`,
               "Content-Type": "application/json",
             },
           }
@@ -83,12 +83,12 @@ export default function Join() {
               value={userEmail}
               onChange={(e) => setUserEmail(e.target.value)}
             />
-            <button
+            {/* <button
               className={userEmail ? "button-enabled" : "button-disabled"}
               disabled={!userEmail}
             >
               인증하기
-            </button>
+            </button> */}
           </div>
           <InputField
             label="성명"
