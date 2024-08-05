@@ -4,10 +4,16 @@ const AuthContext = createContext();
 
 export function AuthProvider({ children }) {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const token = localStorage.getItem("ACCESS_TOKEN");
-    setIsAuthenticated(!!token); // token이 존재하면 true, 존재하지 않으면 false
+    if (token) {
+      setIsAuthenticated(true);
+    } else {
+      setIsAuthenticated(false);
+    }
+    setLoading(false);
   }, []);
 
   const login = (token) => {
@@ -19,6 +25,10 @@ export function AuthProvider({ children }) {
     localStorage.removeItem("ACCESS_TOKEN");
     setIsAuthenticated(false);
   };
+
+  if (loading) {
+    return <div>Loading...</div>; // 로딩 중
+  }
 
   return (
     <AuthContext.Provider value={{ isAuthenticated, login, logout }}>

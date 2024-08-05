@@ -21,8 +21,8 @@ export default function Menu() {
   };
 
   const handleDateTextClick = () => {
-    if (location.pathname !== "/home") {
-      navigate("/home");
+    if (location.pathname !== "/") {
+      navigate("/");
     }
   };
 
