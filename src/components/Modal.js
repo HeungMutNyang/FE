@@ -14,10 +14,12 @@ export default function Modal({ isOpen, onClose }) {
   if (!isOpen) return null;
 
   const handleClick = () => {
+    const content = `${where}에서${together}와${title}`;
+    console.log(content);
+
     const requestBody = {
-      id: id,
-      title: title,
-      done: done,
+      title: content,
+      done: false,
       scheduleDateTime: datetime,
     };
     const token = localStorage.getItem("ACCESS_TOKEN");

@@ -39,27 +39,23 @@ export default function Calendar() {
   ).slice(-2)}-${("0" + today.getDate()).slice(-2)}`;
 
   useEffect(() => {
+    console.log(date);
     const fetchSchedule = async () => {
       const token = localStorage.getItem("ACCESS_TOKEN");
       try {
-        const response = await axios.post(
-          `${process.env.REACT_APP_API_BASE_URL}/schedule`,
-          {
-            startDateTime: `${year}-${("0" + (month + 1)).slice(-2)}-${(
-              "0" + 1
-            ).slice(-2)}`,
-            endDateTime: `${year}-${("0" + (month + 1)).slice(-2)}-${(
-              "0" + daysInMonth
-            ).slice(-2)}`,
-          },
+        const response = await axios.get(
+          `${process.env.REACT_APP_API_BASE_URL}/schedule/date`,
           {
             headers: {
               Authorization: `Bearer ${token}`,
             },
+            params: {
+              date: todayString,
+            },
           }
         );
         setTodo({
-          schedule: response.data.data.schedule,
+          schedule: response.data.data.title,
           done: response.data.data.done,
         });
       } catch (error) {
@@ -69,7 +65,9 @@ export default function Calendar() {
 
     fetchSchedule();
     alert("가져옴");
-  }, [date, year, month, daysInMonth]);
+  }, []);
+
+  //date, year, month, daysInMonth
 
   //이전 달 날짜
   for (let i = firstDay - 1; i >= 0; i--) {
@@ -86,21 +84,21 @@ export default function Calendar() {
     const dateStr = `${year}-${("0" + (month + 1)).slice(-2)}-${("0" + i).slice(
       -2
     )}`;
-    const daySchedule = todo.schedule.filter(
-      (item) => dayjs(item.date).format("YYYY-MM-DD") === dateStr
-    );
-    const dayDone = todo.done.filter(
-      (item) => dayjs(item.date).format("YYYY-MM-DD") === dateStr
-    );
-    const dayData = {
-      schedule: daySchedule,
-      done: dayDone,
-    };
+    // const daySchedule = todo.schedule.filter(
+    //   (item) => dayjs(item.date).format("YYYY-MM-DD") === dateStr
+    // );
+    // const dayDone = todo.done.filter(
+    //   (item) => dayjs(item.date).format("YYYY-MM-DD") === dateStr
+    // );
+    // const dayData = {
+    //   schedule: daySchedule,
+    //   done: dayDone,
+    // };
     days.push({
       day: i,
       currentMonth: true,
       isToday: dateStr === todayString,
-      data: dayData,
+      // data: dayData,
     });
   }
 
@@ -123,7 +121,7 @@ export default function Calendar() {
             day={dayInfo.day}
             currentMonth={dayInfo.currentMonth}
             isToday={dayInfo.isToday}
-            data={dayInfo.data}
+            // data={dayInfo.data}
           />
         ))}
       </div>

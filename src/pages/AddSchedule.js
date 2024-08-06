@@ -11,22 +11,22 @@ export default function AddSchedule() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const fullText = "원하는 날짜를 클릭하면 일정을 추가할 수 있습니다.";
 
-  useEffect(() => {
-    let currentText = "";
-    let index = 0;
+  // useEffect(() => {
+  //   let currentText = "";
+  //   let index = 0;
 
-    const intervalId = setInterval(() => {
-      currentText += fullText[index];
-      setDisplayedText(currentText);
-      index++;
+  //   const intervalId = setInterval(() => {
+  //     currentText += fullText[index];
+  //     setDisplayedText(currentText);
+  //     index++;
 
-      if (index === fullText.length) {
-        clearInterval(intervalId);
-      }
-    }, 100);
+  //     if (index === fullText.length) {
+  //       clearInterval(intervalId);
+  //     }
+  //   }, 100);
 
-    return () => clearInterval(intervalId);
-  }, []);
+  //   return () => clearInterval(intervalId);
+  // });
 
   const handleDateClick = () => {
     setIsModalOpen(true);

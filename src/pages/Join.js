@@ -27,7 +27,10 @@ export default function Join() {
   const [userName, setUserName] = useState("");
   const [userPwd, setUserPwd] = useState("");
   const [rePwd, setRePwd] = useState("");
+  const [weight, setWeight] = useState(0);
+  const [height, setHeight] = useState(0);
   const [nickname, setNickname] = useState("");
+
   const [alertMessage, setAlertMessage] = useState("");
   const passwordRegex =
     /^(?=.*[0-9])(?=.*[`?!@#$%^&*])[a-zA-Z0-9`?!@#$%^&*]{8,}$/; // 비밀번호 정규표현식
@@ -46,7 +49,7 @@ export default function Join() {
         email: userEmail,
         username: nickname,
         password: userPwd,
-        id: userEmail,
+        // id: userEmail,
       };
 
       const token = localStorage.getItem("ACCESS_TOKEN");
@@ -63,6 +66,8 @@ export default function Join() {
           }
         )
         .then((response) => {
+          console.log(response);
+          localStorage.setItem("id", response.data.id);
           navigate("/login");
         })
         .catch((error) => {
@@ -121,6 +126,20 @@ export default function Join() {
             value={nickname}
             onChange={(e) => setNickname(e.target.value)}
           />
+          {/* <div className="input-userinfo">
+            <InputField
+              label="신장"
+              type="number"
+              value={height}
+              onChange={(e) => setHeight(e.target.value)}
+            />
+            <InputField
+              label="몸무게"
+              type="number"
+              value={weight}
+              onChange={(e) => setWeight(e.target.value)}
+            />
+          </div> */}
           <div className="input-checking">
             <span className="alert-text">{alertMessage}</span>
             <InputField

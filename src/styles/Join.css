@@ -166,3 +166,7 @@
   line-height: normal;
   cursor: pointer;
 }
+
+.join-page .input-userinfo {
+  display: flex;
+}

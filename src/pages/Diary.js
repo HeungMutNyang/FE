@@ -68,7 +68,7 @@ export default function Diary() {
       })
       .then((response) => {
         const data = response.data.data;
-
+        console.log(data);
         const matchingEntry = data.find((entry) => {
           const entryDate = new Date(entry.createdDate)
             .toISOString()
@@ -83,6 +83,7 @@ export default function Diary() {
           setTitle(""); // undefined이면 빈 문자열로 설정
           setContent("");
         }
+        console.log("title : ", title, content);
       })
       .catch((Error) => {
         console.log(Error);

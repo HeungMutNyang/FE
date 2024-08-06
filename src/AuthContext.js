@@ -23,6 +23,9 @@ export function AuthProvider({ children }) {
 
   const logout = () => {
     localStorage.removeItem("ACCESS_TOKEN");
+    localStorage.removeItem("email");
+    localStorage.removeItem("email");
+
     setIsAuthenticated(false);
   };
 

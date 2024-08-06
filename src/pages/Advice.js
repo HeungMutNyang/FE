@@ -15,8 +15,11 @@ export default function Advice() {
     const token = localStorage.getItem("ACCESS_TOKEN");
     axios
       .get(`${process.env.REACT_APP_API_BASE_URL}/advice`, {
+        // params: {
+        //   userId: localStorage.getItem("email"),
+        // },
         headers: {
-          Authorization: `Bearer ${token}`,
+          authorization: `Bearer ${token}`,
         },
       })
       .then((response) => {
