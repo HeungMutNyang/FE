@@ -17,7 +17,7 @@ function App() {
   return (
     <AuthProvider>
       <DateProvider>
-        <Router>
+        <Router basename="/FE">
           <Routes>
             <Route path="/login" element={<Login />} />
             <Route path="/join" element={<Join />} />
