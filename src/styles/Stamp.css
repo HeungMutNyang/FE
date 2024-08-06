@@ -12,13 +12,13 @@
   position: relative;
 }
 
-.stamp-calendar {
+.stamp-page .stamp-calendar {
   width: 80%;
   height: 70%;
   margin-bottom: 4rem;
 }
 
-.stamp-calendar > * {
+.stamp-page .stamp-calendar > * {
   flex: 1;
 }
 .stamp-page .doB-box {
@@ -28,17 +28,17 @@
   z-index: 1;
 }
 
-.doB-box .doB {
+.stamp-page .doB-box .doB {
   position: absolute;
   right: 0;
   bottom: 0;
 }
 
-.doB-box .text-box {
+.stamp-page .doB-box .text-box {
   width: 60rem;
 }
 
-.text-stamp {
+.stamp-page .text-stamp {
   position: absolute;
   top: 4rem;
   left: 8rem;

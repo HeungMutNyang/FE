@@ -8,23 +8,23 @@
   position: relative;
 }
 
-.left-box {
+.home-page .left-box {
   margin-left: 8rem;
   padding-top: 6rem;
 }
 
-.date {
+.home-page .date {
   width: 48rem;
   height: 30.9375rem;
   flex-shrink: 0;
 }
 
-.memo {
+.home-page .memo {
   margin-top: 11.9rem;
   margin-left: 4rem;
 }
 
-.fail {
+.home-page .fail {
   width: 48rem;
   height: 16.8125rem;
   flex-shrink: 0;
@@ -37,7 +37,7 @@
   filter: blur(0.25px);
 }
 
-.fail h3 {
+.home-page .fail h3 {
   color: #2d2d2d;
   font-family: pretendard;
   font-size: 1.25rem;
@@ -47,12 +47,12 @@
   padding: 1rem;
 }
 
-.fail img {
+.home-page .fail img {
   position: absolute;
   bottom: 0;
 }
 
-ol {
+.home-page ol {
   padding: 2rem;
   color: #a2a2a2;
   font-family: pretendard;
@@ -62,7 +62,7 @@ ol {
   line-height: normal;
 }
 
-.advice-box {
+.home-page .advice-box {
   margin-left: 3rem;
   display: flex;
   flex-direction: column;
@@ -70,18 +70,18 @@ ol {
   position: relative;
 }
 
-.advice-box .text {
+.home-page .advice-box .text {
   position: absolute;
   top: 3rem;
   z-index: 1;
 }
 
-.advice-box .doB {
+.home-page .advice-box .doB {
   position: absolute;
   top: 8rem;
 }
 
-.advice {
+.home-page .advice {
   width: 14.75rem;
   height: 3.25rem;
   position: absolute;

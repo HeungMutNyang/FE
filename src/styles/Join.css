@@ -3,7 +3,7 @@
   display: flex;
 }
 
-.form-container {
+.join-page .form-container {
   flex: 1; /* 좌우 비율을 동일하게 */
   display: flex;
   flex-direction: column;
@@ -11,7 +11,7 @@
   justify-content: center;
 }
 
-.preview-container {
+.join-page .preview-container {
   flex: 1; /* 좌우 비율을 동일하게 */
   display: flex;
   flex-direction: column;
@@ -20,7 +20,7 @@
   background-color: #00c6ae;
 }
 
-form {
+.join-page form {
   margin: 0 auto;
   height: 85%;
   display: flex;
@@ -30,14 +30,14 @@ form {
   position: relative;
 }
 
-.input-field {
+.join-page .input-field {
   display: flex;
   flex-direction: column;
   margin-top: 2rem;
   margin-bottom: 0.5rem;
 }
 
-.input-field label {
+.join-page .input-field label {
   color: #2d2d2d;
   font-family: pretendard;
   font-size: 0.9375rem;
@@ -47,7 +47,7 @@ form {
   padding-left: 0.5rem;
 }
 
-.input-field input {
+.join-page .input-field input {
   width: 22.625rem;
   height: 2.75rem;
   border: 1px solid #dfdfdf;
@@ -60,7 +60,7 @@ form {
   padding-left: 0.5rem;
 }
 
-form h2 {
+.join-page form h2 {
   position: absolute;
   top: 0;
   left: 0;
@@ -72,11 +72,11 @@ form h2 {
   line-height: normal;
 }
 
-.preview-container img {
+.join-page .preview-container img {
   margin-bottom: 1.5rem;
 }
 
-.preview-container span {
+.join-page .preview-container span {
   color: #2d2d2d;
   font-family: "jalnanGothic";
   font-size: 2rem;
@@ -85,13 +85,13 @@ form h2 {
   line-height: normal;
 }
 
-.mail-checking {
+.join-page .mail-checking {
   width: 100%;
   position: relative;
   /* padding-bottom: 2.5rem; */
 }
 
-.mail-checking button {
+.join-page .mail-checking button {
   width: 4.5625rem;
   height: 2.5rem;
   flex-shrink: 0;
@@ -107,16 +107,16 @@ form h2 {
   right: 0;
 }
 
-.mail-checking button.button-disabled {
+.join-page .mail-checking button.button-disabled {
   background-color: rgba(238, 238, 238, 1);
 }
 
-.mail-checking button.button-enabled {
+.join-page .mail-checking button.button-enabled {
   background-color: rgb(119, 119, 119);
   cursor: pointer;
 }
 
-.password-checking {
+.join-page .password-checking {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -124,13 +124,13 @@ form h2 {
   margin-top: 2rem;
   margin-bottom: 0.5rem;
 }
-.password-checking .input-field,
-.input-checking .input-field {
+.join-page .password-checking .input-field,
+.join-page .input-checking .input-field {
   margin-top: 0;
   margin-bottom: 0;
 }
 
-.password-checking span {
+.join-page .password-checking span {
   color: #2d2d2d;
   font-family: pretendard;
   font-size: 0.875rem;
@@ -140,11 +140,11 @@ form h2 {
   padding-left: 0.5rem;
 }
 
-.input-checking {
+.join-page .input-checking {
   margin-top: 2rem;
 }
 
-.alert-text {
+.join-page .alert-text {
   padding-left: 0.5rem;
   color: #ca3434;
   font-family: Pretendard;
@@ -154,7 +154,7 @@ form h2 {
   line-height: normal;
 }
 
-.input-checking .input-field input {
+.join-page .input-checking .input-field input {
   margin-top: 0.25rem;
   border-radius: 0.9375rem;
   background-color: #2d2d2d;

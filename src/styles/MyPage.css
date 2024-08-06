@@ -1,0 +1,51 @@
+.SetPassword-page {
+  display: flex;
+  height: 100vh;
+}
+
+.SetPassword-graphic {
+  width: 80%;
+  background-color: #00c6ae;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.SetPassword-graphic svg:first-child {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.SetPassword-graphic svg:last-child {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+  display: block;
+  position: absolute;
+  z-index: 2;
+}
+
+.minicat {
+  position: absolute;
+  z-index: 3;
+  width: 222px;
+  height: 222px;
+  top: 700px;
+  right: 125px;
+}
+
+.hospital {
+  position: absolute;
+  z-index: 4;
+  width: 335px;
+  height: 335px;
+  top: 610px;
+  left: 26px;
+}

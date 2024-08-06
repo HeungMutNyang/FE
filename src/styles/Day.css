@@ -9,7 +9,7 @@
   position: relative;
 }
 
-.day {
+.day-box .day {
   font-family: pretendard;
   font-size: 1.125rem;
   font-style: normal;
@@ -31,7 +31,7 @@
   background-color: #f8ffac;
 }
 
-.todo {
+.day-box .todo {
   position: absolute;
   bottom: 0;
   width: 100%;

@@ -1,6 +1,6 @@
 .Menu_bar {
   width: 20%;
-  height: 100vh;
+  height: 100%;
   background-color: #effdfb;
   display: flex;
   justify-content: center;
@@ -66,5 +66,10 @@
   line-height: normal;
   border: none;
   margin-right: 1rem;
+  cursor: pointer;
+}
+.Menu_items img {
+  position: absolute;
+  bottom: 1rem;
   cursor: pointer;
 }
