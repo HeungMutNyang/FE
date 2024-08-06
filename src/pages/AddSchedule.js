@@ -8,8 +8,8 @@ import round_rect from "../assets/img/round_rect4.png";
 
 export default function AddSchedule() {
   const [displayedText, setDisplayedText] = useState("");
-  const [isModalOpen, setIsModalOpen] = useState(false); 
-  const fullText = "원하는 날짜를 클릭하면 일정을 추가할 수 있습니다."; 
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const fullText = "원하는 날짜를 클릭하면 일정을 추가할 수 있습니다.";
 
   useEffect(() => {
     let currentText = "";
@@ -23,13 +23,13 @@ export default function AddSchedule() {
       if (index === fullText.length) {
         clearInterval(intervalId);
       }
-    }, 100); 
+    }, 100);
 
-    return () => clearInterval(intervalId); 
+    return () => clearInterval(intervalId);
   }, []);
 
   const handleDateClick = () => {
-    setIsModalOpen(true); 
+    setIsModalOpen(true);
   };
 
   return (

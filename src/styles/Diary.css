@@ -119,9 +119,10 @@
 
 .diary-page .dob-container .advice {
   position: absolute;
-  top: -2rem;
+  top: -1.5rem;
+  left: 3rem;
   text-align: center;
   font-family: "JalnanGothic";
-  font-size: 0.9375rem;
   background: pinks;
+  font-size: 1.2rem;
 }

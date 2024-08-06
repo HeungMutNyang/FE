@@ -7,6 +7,7 @@ import Pwd from "./pages/SetPassword";
 import Stamp from "./pages/Stamp";
 import Diary from "./pages/Diary";
 import Advice from "./pages/Advice";
+import MyPage from "./pages/My_page";
 import { DateProvider } from "./DateContext";
 import AddSchedule from "./pages/AddSchedule";
 import { AuthProvider } from "./AuthContext";
@@ -37,6 +38,10 @@ function App() {
             <Route
               path="/add-schedule"
               element={<ProtectedRoute element={<AddSchedule />} />}
+            />
+            <Route
+              path="/my-page"
+              element={<ProtectedRoute element={<MyPage />} />}
             />
           </Routes>
         </Router>

@@ -34,6 +34,7 @@ export default function Login() {
       const requestBody = {
         email: userEmail,
         password: userPwd,
+        id: userEmail,
       };
 
       const token = localStorage.getItem("ACCESS_TOKEN");
@@ -51,9 +52,11 @@ export default function Login() {
         )
         .then((response) => {
           // login(token);
+          console.log(response);
           login(response.data.token); // 로그인 상태 업데이트
           console.log("login", response.data.token);
           localStorage.setItem("email", response.data.email);
+          // localStorage.setItem("username", response.data.username);
           navigate("/");
         })
         .catch((error) => {
