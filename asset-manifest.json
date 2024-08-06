@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/HeungMutNyang/FE/static/css/main.ff9c94fb.css",
-    "main.js": "/HeungMutNyang/FE/static/js/main.b71bb818.js",
-    "static/media/Jalnan2TTF.ttf": "/HeungMutNyang/FE/static/media/Jalnan2TTF.512497399460b79dd80f.ttf",
-    "static/media/Pretendard-Regular.ttf": "/HeungMutNyang/FE/static/media/Pretendard-Regular.fbe5b096111efa3e3bc2.ttf",
-    "static/media/JalnanGothicTTF.ttf": "/HeungMutNyang/FE/static/media/JalnanGothicTTF.ee2433c2e715c14112c3.ttf",
-    "index.html": "/HeungMutNyang/FE/index.html",
-    "main.ff9c94fb.css.map": "/HeungMutNyang/FE/static/css/main.ff9c94fb.css.map",
-    "main.b71bb818.js.map": "/HeungMutNyang/FE/static/js/main.b71bb818.js.map"
+    "main.css": "/FE/static/css/main.6663d26f.css",
+    "main.js": "/FE/static/js/main.b71bb818.js",
+    "static/media/Jalnan2TTF.ttf": "/FE/static/media/Jalnan2TTF.512497399460b79dd80f.ttf",
+    "static/media/Pretendard-Regular.ttf": "/FE/static/media/Pretendard-Regular.fbe5b096111efa3e3bc2.ttf",
+    "static/media/JalnanGothicTTF.ttf": "/FE/static/media/JalnanGothicTTF.ee2433c2e715c14112c3.ttf",
+    "index.html": "/FE/index.html",
+    "main.6663d26f.css.map": "/FE/static/css/main.6663d26f.css.map",
+    "main.b71bb818.js.map": "/FE/static/js/main.b71bb818.js.map"
   },
   "entrypoints": [
-    "static/css/main.ff9c94fb.css",
+    "static/css/main.6663d26f.css",
     "static/js/main.b71bb818.js"
   ]
 }
